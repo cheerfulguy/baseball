@@ -10,7 +10,7 @@ import time
 
 starttime = time.time()
 
-infile = open("listu.csv")
+infile = open("listu_part.csv")
 names = []
 for line in infile:
     names.append(line.strip())
@@ -45,5 +45,21 @@ for name in names:
 
 print "HOLDUP : Here come all the big files"
 revhelper.getrevfiles(40000)
-                        
+
+# for name in names:
+#     for month in range(12,13):
+#         for year in range(2006,2012):
+#             # for each combination get revid information and update lookup
+#             playername = urllib.quote(name)
+#             print "Getting " + playername + ":" + str(month) +"," + str(year)
+
+
+#             t = threading.Thread(target=worker, args=(playername,month, year,))
+#             threads.append(t)
+#             t.start()
+
+#             imgchar.updateimgcharlookup(playername,month,year)
+#             traf.updatetraflookup(playername, month, year)
+#             revs.updaterevslookup(playername, month, year)
+
 print "elapsed time " + str(time.time() - starttime)

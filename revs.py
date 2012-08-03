@@ -16,7 +16,6 @@ def updaterevslookup(playername, month, year):
         count = getrevcount(playername,datestart,dateend)
         writerevs(playername, month, year, count)
 
-
 def getrevcount(playername,datestart,dateend):
     
     filename2 = 'dumps/revdata_long/' + playername+"_"+str(datestart)[:-2]+'.xml'
@@ -77,9 +76,6 @@ def getrevcount(playername,datestart,dateend):
             cont_flag = 0
 
     return count
-
-
-    
 
 def getrevs(playername, month, year):
     
